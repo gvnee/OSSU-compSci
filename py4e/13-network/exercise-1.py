@@ -3,7 +3,7 @@ import socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 url = input("enter URL: ")
-domain = url.split('/')[0]
+domain = url.split('/')[2]
 try:
   sock.connect((domain, 80))
 except:
