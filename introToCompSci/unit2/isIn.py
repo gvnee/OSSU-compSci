@@ -1,14 +1,11 @@
 def isIn(char, aStr):
-  l = 0
-  r = len(aStr) - 1
-  while(l<r):
-    mid = int(l+(r-l)/2)
-    if char == aStr[mid]:
-      return True
-    elif char > aStr[mid]:
-      l = mid
-    else:
-      r = mid
-  return False
-
-print(isIn('z', 'abcdefgh'))
+  mid = len(aStr)//2
+  if aStr=='': return False
+  if len(aStr) == 1:
+    return aStr == char
+  if char == aStr[mid]:
+    return True
+  elif char > aStr[mid]:
+    return isIn(char, aStr[mid+1:])
+  else:
+    return isIn(char, aStr[:mid])
