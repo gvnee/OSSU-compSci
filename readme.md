@@ -1,6 +1,6 @@
 ~~1. Python for Everybody~~  
 **2. Introduction to Computer Science and Programming using Python**  
-3. How to Code - Simple Data  
+**3. How to Code - Simple Data**  
 4. How to Code - Complex Data  
 5. Programming Languages, Part A  
 6. Programming Languages, Part B  
