@@ -1,38 +1,74 @@
-~~1. Python for Everybody~~  
-**2. Introduction to Computer Science and Programming using Python**  
-**3. How to Code - Simple Data**  
-4. How to Code - Complex Data  
-5. Programming Languages, Part A  
-6. Programming Languages, Part B  
-7. Programming Languages, Part C  
-8. Object-Oriented Design  
-9. Software Architecture  
-10. Calculus 1A  
-11. Calculus 1B  
-12. Calculus 1C  
-13. Mathematics for Computer Science  
-14. The missing Semester of Your CS Education  
-15. Build a Modern Computer from First Principles: From Nand to Tetris  
-16. Build a Modern Computer from First Principles: From Nand to Tetris 2  
-17. Operating Systems: Three Easy Pieces  
-18. Computer Networking: a Top-Down Approach  
-19. Divide and Conquer, Sorting and Searching, and Randomized Algorithms  
-20. Graph Search, Shortest Paths, and Data Structures  
-21. Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming  
-22. Shortest Paths Revisited, NP-Complete Problems and What To Do About Them  
-23. Cybersecurity Fundamentals  
-24. Principles of Secure Coding  
-25. Identifying Security Vulnerabilities  
-26. Identifying Security Vulnerabilities in C/C++ Programming  
-27. Databases: Modeling and Theory  
-28. Databases: Relational Databases and SQL  
-29. Databases: semistructured Data  
-30. Machine Learning  
-31. Computer Graphics  
-32. Software Engineering: Introduction  
-33. Parallel Programming  
-34. Compilers  
-35. Introduction to Haskell  
-36. Learn Prolog Now!  
-37. Software Debugging  
-38. Software Testing  
+# Intro to CS
+
+- ~~Python for Everybody~~  
+- **Introduction to Computer Science and Programming using Python**  
+
+# Core CS
+
+- **How to Code - Simple Data**  
+- How to Code - Complex Data  
+- Programming Languages, Part A  
+- Programming Languages, Part B  
+- Programming Languages, Part C  
+- Object-Oriented Design  
+- Software Architecture  
+
+# Core math
+
+## prerequisites
+- algebra
+- geometry
+- trigonometry
+- pre-calculus
+---
+- Calculus 1A  
+- Calculus 1B  
+- Calculus 1C  
+- Mathematics for Computer Science  
+
+# CS tools
+
+- The missing Semester of Your CS Education  
+
+# Core systems
+
+## prerequisites
+- basic physics
+- high school physics
+---
+- Build a Modern Computer from First Principles: From Nand to Tetris  
+- Build a Modern Computer from First Principles: From Nand to Tetris 2  
+- Operating Systems: Three Easy Pieces  
+- Computer Networking: a Top-Down Approach  
+
+# Core theory
+
+- Divide and Conquer, Sorting and Searching, and Randomized Algorithms  
+- Graph Search, Shortest Paths, and Data Structures  
+- Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming  
+- Shortest Paths Revisited, NP-Complete Problems and What To Do About Them  
+
+# Core security
+
+- Cybersecurity Fundamentals  
+- Principles of Secure Coding  
+- Identifying Security Vulnerabilities  
+- Identifying Security Vulnerabilities in C/C++ Programming  
+
+# Core applications
+
+- Databases: Modeling and Theory  
+- Databases: Relational Databases and SQL  
+- Databases: semistructured Data  
+- Machine Learning  
+- Computer Graphics  
+- Software Engineering: Introduction  
+
+# Advanced CS
+
+- Parallel Programming  
+- Compilers  
+- Introduction to Haskell  
+- Learn Prolog Now!  
+- Software Debugging  
+- Software Testing  
