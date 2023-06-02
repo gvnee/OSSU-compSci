@@ -1,9 +1,7 @@
 res = ''
 cur = ''
-prev = 'a'
-for l in s:
-  if l >= prev: cur+=l
-  else: cur = l
+for i in range(len(s)):
+  if i != 0 and s[i] >= s[i-1]: cur+=s[i]
+  else: cur = s[i]
   if len(cur) > len(res): res = cur
-  prev = l
 print("Longest substring in alphabetical order is:", res)
