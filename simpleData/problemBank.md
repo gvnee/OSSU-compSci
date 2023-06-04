@@ -1,6 +1,6 @@
 - ~~more arithmetic expression~~
-- evaluation-prims
-- tile
+- ~~evaluation prims~~
+- ~~tile~~
 - glue
 - compare-images
 - more foo evaluation
