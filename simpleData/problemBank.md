@@ -1,26 +1,26 @@
 - ~~more arithmetic expression~~
 - ~~evaluation prims~~
 - ~~tile~~
-- glue
-- compare-images
-- more foo evaluation
-- even more foo evaluation
-- cflag
-- even more arithmetic expression
-- triangle
-- bobble evaluation
-- debug rectangle
-- arithmetic expression
-- overlay
-- function writing
-- foo evaluation
-- yell
-- area
-- image area
-- tall
+- ~~glue~~
+- ~~compare images~~
+- ~~more foo evaluation~~
+- ~~even more foo evaluation~~
+- ~~cflag~~
+- ~~even more arithmetic expression~~
+- ~~triangle~~
+- ~~bobble evaluation~~
+- ~~debug rectangle~~
+- ~~arithmetic expression~~
+- ~~overlay~~
+- ~~function writing~~
+- ~~foo evaluation~~
+- ~~yell~~
+- ~~area~~
+- ~~image area~~
+- ~~tall~~
 - summon
-- less than five
-- boxify
+- ~~less than five~~
+- ~~boxify~~
 - pluralize stubs
 - blue triangle
 - double error
@@ -29,10 +29,10 @@
 - cartesian
 - city name
 - best
-- seat num
-- letter grade
-- countdown
-- aisle
+- ~~seat num~~
+- ~~letter grade~~
+- ~~countdown~~
+- ~~aisle~~
 - bump uprd
 - countdown-to-display
 - employees
