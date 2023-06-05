@@ -18,22 +18,22 @@
 - ~~area~~
 - ~~image area~~
 - ~~tall~~
-- summon
+- ~~summon~~
 - ~~less than five~~
 - ~~boxify~~
-- pluralize stubs
-- blue triangle
-- double error
-- make box
-- ensure question
-- cartesian
-- city name
-- best
+- ~~pluralize stubs~~
+- ~~blue triangle~~
+- ~~double error~~
+- ~~make box~~
+- ~~ensure question~~
+- ~~cartesian~~
+- ~~city name~~
+- ~~best~~
 - ~~seat num~~
 - ~~letter grade~~
 - ~~countdown~~
 - ~~aisle~~
-- bump uprd
+- ~~bump uprd~~
 - countdown-to-display
 - employees
 - ~~demolish~~
