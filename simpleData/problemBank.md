@@ -34,18 +34,18 @@
 - ~~countdown~~
 - ~~aisle~~
 - ~~bump uprd~~
-- countdown-to-display
-- employees
+- ~~countdown-to-display~~
+- ~~employees~~
 - ~~demolish~~
 - ~~rocket~~
-- letter grade error
-- style rules
-- bike route
-- rocket error
-- direction
-- dinner
-- cat
-- add mouse handler
+- ~~letter grade error~~
+- ~~style rules~~
+- ~~bike route~~
+- ~~rocket error~~
+- ~~direction~~
+- ~~dinner~~
+- ~~cat~~
+- ~~add mouse handler~~
 - countdown animation
 - traffic light
 - cowabunga
