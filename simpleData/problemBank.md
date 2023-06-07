@@ -46,7 +46,7 @@
 - ~~dinner~~
 - ~~cat~~
 - ~~add mouse handler~~
-- countdown animation
+- ~~countdown animation~~
 - traffic light
 - cowabunga
 - movie starter
