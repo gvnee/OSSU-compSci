@@ -48,32 +48,32 @@
 
 # Core theory
 
-- [Divide and Conquer, Sorting and Searching, and Randomized Algorithms]()  
-- [Graph Search, Shortest Paths, and Data Structures]()  
-- [Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming]()  
-- [Shortest Paths Revisited, NP-Complete Problems and What To Do About Them]()  
+- [Divide and Conquer, Sorting and Searching, and Randomized Algorithms](https://www.coursera.org/learn/algorithms-divide-conquer)  
+- [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)  
+- [Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming](https://www.coursera.org/learn/algorithms-greedy)  
+- [Shortest Paths Revisited, NP-Complete Problems and What To Do About Them](https://www.coursera.org/learn/algorithms-npcomplete)  
 
 # Core security
 
-- [Cybersecurity Fundamentals]()  
-- [Principles of Secure Coding]()  
-- [Identifying Security Vulnerabilities]()  
-- [Identifying Security Vulnerabilities in C/C++ Programming]()  
+- [Cybersecurity Fundamentals](https://www.edx.org/course/cybersecurity-fundamentals)  
+- [Principles of Secure Coding](https://www.coursera.org/learn/secure-coding-principles)  
+- [Identifying Security Vulnerabilities](https://www.coursera.org/learn/identifying-security-vulnerabilities)  
+- [Identifying Security Vulnerabilities in C/C++ Programming](https://www.coursera.org/learn/identifying-security-vulnerabilities-c-programming)  
 
 # Core applications
 
-- [Databases: Modeling and Theory]()  
-- [Databases: Relational Databases and SQL]()  
-- [Databases: semistructured Data]()  
-- [Machine Learning]()  
-- [Computer Graphics]()  
-- [Software Engineering: Introduction]()  
+- [Databases: Modeling and Theory](https://www.edx.org/course/modeling-and-theory)  
+- [Databases: Relational Databases and SQL](https://www.edx.org/course/databases-5-sql)  
+- [Databases: semistructured Data](https://www.edx.org/course/semistructured-data)  
+- [Machine Learning](https://www.edx.org/course/semistructured-data)  
+- [Computer Graphics](https://www.edx.org/course/computer-graphics-2)  
+- [Software Engineering: Introduction](https://www.edx.org/course/software-engineering-introduction)  
 
 # Advanced CS
 
-- [Parallel Programming]()  
-- [Compilers]()  
-- [Introduction to Haskell]()  
-- [Learn Prolog Now!]()  
-- [Software Debugging]()  
-- [Software Testing]()  
+- [Parallel Programming](https://www.coursera.org/learn/scala-parallel-programming)  
+- [Compilers](https://www.edx.org/course/compilers)  
+- [Introduction to Haskell](https://www.seas.upenn.edu/~cis194/fall16/)  
+- [Learn Prolog Now!](https://www.let.rug.nl/bos/lpn//lpnpage.php?pageid=online)  
+- [Software Debugging](https://www.udacity.com/course/software-debugging--cs259)  
+- [Software Testing](https://www.udacity.com/course/software-testing--cs258)  
