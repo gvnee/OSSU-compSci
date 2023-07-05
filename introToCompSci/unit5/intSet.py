@@ -17,7 +17,7 @@ class intSet(object):
   def intersect(self, other):
     intersect = intSet()
     for i in self.vals:
-      if i in other.vals:
+      if other.member(i):
         intersect.insert(i)
     return intersect
   def __len__(self):

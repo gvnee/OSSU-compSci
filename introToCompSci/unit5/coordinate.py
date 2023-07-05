@@ -9,13 +9,11 @@ class Coordinate(object):
   def __str__(self):
     return '<' + str(self.x) + ',' + str(self.y) + '>'
   def __eq__(self, other):
-    if self.x == other.getX() and self.y == other.getY():
-      return True
-    return False
+    return self.x == other.getX() and self.y == other.getY():
   def __repr__(self):
     x = str(self.x)
     y = str(self.y)
-    return "Coordinate(" + x +',' + y + ")"
+    return "Coordinate(" + x +',' + y + ')'
 
 c = Coordinate(5, 5)
 print(c)
