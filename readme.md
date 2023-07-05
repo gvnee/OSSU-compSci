@@ -36,7 +36,6 @@
 # Core systems
 
 ## prerequisites
-- basic physics
 - high school physics
 
 ---
