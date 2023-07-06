@@ -12,7 +12,7 @@ class Hand(object):
         self.VOWELS = 'aeiou'
         self.CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
 
-        # Deal a new hand
+        # Deal a new hand 
         self.dealNewHand()
 
     def dealNewHand(self):
@@ -57,7 +57,7 @@ class Hand(object):
         for k in self.hand:
             ans += self.hand[k]
         return ans
-    
+        
     def __str__(self):
         '''
         Display a string representation of the hand.
@@ -75,20 +75,27 @@ class Hand(object):
 
         Updates the hand: if self.hand does have all the letters to make
         the word, modifies self.hand by using up the letters in the given word.
-
+        
         Returns True if the word was able to be made with the letter in
         the hand; False otherwise.
-        
+
         word: string
         returns: Boolean (if the word was or was not made)
         """
+        # old code might be wrong
+        # for letter in word:
+        #   if letter not in self.hand:
+        #     return False
+        # for letter in word:
+        #     self.hand[letter] -= 1
+        # return True
+        handCopy = self.hand.copy()
         for letter in word:
-          if letter not in self.hand:
-            return False
-        for letter in word:
-            self.hand[letter] -= 1
+            if handCopy.get(letter, 0) < 1:
+                return False
+            handCopy[letter] -= 1
+        self.hand = handCopy.copy()
         return True
-
     
 myHand = Hand(7)
 print(myHand)
