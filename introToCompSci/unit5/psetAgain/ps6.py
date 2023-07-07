@@ -103,10 +103,10 @@ class Message(object):
                  another letter (string). 
         '''
         cipher = {}
-        low = string.ascii_lowercase
+        lower = string.ascii_lowercase
         upper = string.ascii_uppercase
         for i in range(26):
-            cipher[low[i]] = low[(i+shift)%26]
+            cipher[lower[i]] = lower[(i+shift)%26]
             cipher[upper[i]] = upper[(i+shift)%26]
         return cipher
 
