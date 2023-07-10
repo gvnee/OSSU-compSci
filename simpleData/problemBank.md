@@ -49,9 +49,9 @@
 - ~~countdown animation~~
 - traffic light
 - cowabunga
-- movie starter
+- ~~movie starter~~
 - spinning
-- student
+- ~~student~~
 - trip
 - growing grass
 - tracker
