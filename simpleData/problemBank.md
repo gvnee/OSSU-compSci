@@ -47,10 +47,10 @@
 - ~~cat~~
 - ~~add mouse handler~~
 - ~~countdown animation~~
-- traffic light
-- cowabunga
+- ~~traffic light~~
+- ~~cowabunga~~
 - ~~movie starter~~
-- spinning
+- ~~spinning~~
 - ~~student~~
 - trip
 - growing grass
