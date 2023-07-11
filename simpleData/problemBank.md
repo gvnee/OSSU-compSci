@@ -52,9 +52,9 @@
 - ~~movie starter~~
 - ~~spinning~~
 - ~~student~~
-- trip
-- growing grass
-- tracker
+- ~~trip~~
+- ~~growing grass~~
+- ~~tracker~~
 - rolling lambda
 - compound evaluation
 - water balloon
