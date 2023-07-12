@@ -17,9 +17,10 @@
 # Core math
 
 ## prerequisites
-- algebra
+- **algebra**
 - geometry
 - trigonometry
+- proof
 - pre-calculus
   
 ---
