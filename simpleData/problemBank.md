@@ -60,10 +60,10 @@
 - ~~water balloon~~
 - ~~simple text editor~~
 - total string length
-- double all
-- boolean list
+- ~~double all~~
+- ~~boolean list~~
 - yell all
-- largest
+- ~~largest~~
 - tuition graph
 - alternative tuition graph
 - spinning bears
