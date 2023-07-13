@@ -56,9 +56,9 @@
 - ~~growing grass~~
 - ~~tracker~~
 - rolling lambda
-- compound evaluation
-- water balloon
-- simple text editor
+- ~~compound evaluation~~
+- ~~water balloon~~
+- ~~simple text editor~~
 - total string length
 - double all
 - boolean list
