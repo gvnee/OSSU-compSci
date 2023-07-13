@@ -1,7 +1,7 @@
-# Intro to CS
+# ~~Intro to CS~~
 
 - ~~[Python for Everybody](https://www.py4e.com/lessons)~~  
-- **[Introduction to Computer Science and Programming using Python](https://www.edx.org/course/introduction-to-computer-science-and-programming-7)**  
+- ~~[Introduction to Computer Science and Programming using Python](https://www.edx.org/course/introduction-to-computer-science-and-programming-7)~~  
 
 # Core CS
 
