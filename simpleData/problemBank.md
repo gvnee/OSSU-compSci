@@ -59,14 +59,14 @@
 - ~~compound evaluation~~
 - ~~water balloon~~
 - ~~simple text editor~~
-- total string length
+- ~~total string length~~
 - ~~double all~~
 - ~~boolean list~~
-- yell all
+- ~~yell all~~
 - ~~largest~~
-- image list
-- tuition graph
-- alternative tuition graph
+- ~~image list~~
+- ~~tuition graph~~
+- ~~alternative tuition graph~~
 - spinning bears
 - tuition graph c
 - naturals
