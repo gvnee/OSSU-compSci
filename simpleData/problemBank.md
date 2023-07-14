@@ -64,6 +64,7 @@
 - ~~boolean list~~
 - yell all
 - ~~largest~~
+- image list
 - tuition graph
 - alternative tuition graph
 - spinning bears
