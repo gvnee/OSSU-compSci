@@ -67,7 +67,7 @@
 - ~~image list~~
 - ~~tuition graph~~
 - ~~alternative tuition graph~~
-- spinning bears
+- ~~spinning bears~~
 - tuition graph c
 - naturals
 - new numerals
