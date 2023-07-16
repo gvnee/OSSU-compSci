@@ -68,16 +68,16 @@
 - ~~tuition graph~~
 - ~~alternative tuition graph~~
 - ~~spinning bears~~
-- tuition graph c
-- naturals
-- new numerals
-- sum to n
-- decreasing image
-- odd from n
-- concentric cirlces
-- arrange images
-- render roster
-- making rain filtered
+- ~~tuition graph c~~
+- ~~naturals~~
+- ~~new numerals~~
+- ~~sum to n~~
+- ~~decreasing image~~
+- ~~odd from n~~
+- ~~concentric cirlces~~
+- ~~arrange images~~
+- ~~render roster~~
+- ~~making rain filtered~~
 - lookup in list
 - bst dd
 - lookup in bst
