@@ -78,7 +78,8 @@
 - ~~arrange images~~
 - ~~render roster~~
 - ~~making rain filtered~~
-- lookup in list
+- naturals and helpers design quiz
+- ~~lookup in list~~
 - bst dd
 - lookup in bst
 - render bst
