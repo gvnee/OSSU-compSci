@@ -35,11 +35,12 @@
 - ~~letter grade~~
 - ~~countdown~~
 - ~~aisle~~
-- ~~bump uprd~~
+- ~~bump up~~
 - ~~countdown-to-display~~
 - ~~employees~~
 - ~~demolish~~
 - ~~rocket~~
+- htDD Design quiz
 - ~~letter grade error~~
 - ~~style rules~~
 - ~~bike route~~
@@ -60,6 +61,7 @@
 - rolling lambda
 - ~~compound evaluation~~
 - ~~water balloon~~
+- HtDW quiz
 - ~~simple text editor~~
 - ~~total string length~~
 - ~~double all~~
@@ -85,10 +87,10 @@
 - ~~bst dd~~
 - ~~lookup in bst~~
 - ~~render bst~~
-- count nodes
-- sum keys
-- height starter
-- insert starter
+- ~~count nodes~~
+- ~~sum keys~~
+- ~~height starter~~
+- ~~insert starter~~
 - balance factor
 - render bst w lines
 - space invaders
