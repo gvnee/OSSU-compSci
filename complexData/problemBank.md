@@ -1,0 +1,59 @@
+- fs
+- image organizer
+- find person
+- hp family tree
+- concat
+- merge
+- zip
+- pattern match
+- championship bracket
+- fs v4, v5, v6, v7
+- evaluate boo
+- render bst w lines faster
+- evaluate foo
+- encapsulate total area
+- championship bracket improved
+- parameterization
+- using built ins
+- closures
+- wide only
+- photos
+- abstract sum
+- abstract sum
+- abstract some
+- ellipses
+- bag
+- sum n
+- fold dir
+- accounts
+- weather
+- fractals
+- termination
+- circle fractal
+- van koch
+- cantor
+- sudoku
+- maze 2w
+- triangle solitaire
+- nqueens
+- dropn
+- replicate elm
+- strictly decreasing
+- average tr
+- product tr
+- sum n tr
+- sum odds tr
+- to list tr
+- count odd even tr
+- rev tr
+- house path
+- contains key tr
+- skip1
+- sum tr
+- same house as parent
+- all reachable
+- count rooms
+- lookup room
+- max exits from
+- max exits to
+- graphs
