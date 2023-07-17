@@ -6,7 +6,7 @@
 # Core CS
 
 - **[How to Code - Simple Data](https://www.edx.org/course/how-to-code-simple-data)**  
-- [How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data)  
+- **[How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data)** 
 - [Programming Languages, Part A](https://www.coursera.org/learn/programming-languages)  
 - [Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b)  
 - [Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c)  
