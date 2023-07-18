@@ -40,17 +40,18 @@
 - ~~employees~~
 - ~~demolish~~
 - ~~rocket~~
-- htDD Design quiz
 - ~~letter grade error~~
 - ~~style rules~~
 - ~~bike route~~
 - ~~rocket error~~
 - ~~direction~~
 - ~~dinner~~
+- ~~htDD Design quiz~~
 - ~~cat~~
 - ~~add mouse handler~~
 - ~~countdown animation~~
 - ~~traffic light~~
+- **HtDW design quiz**
 - ~~cowabunga~~
 - ~~movie starter~~
 - ~~spinning~~
@@ -58,10 +59,9 @@
 - ~~trip~~
 - ~~growing grass~~
 - ~~tracker~~
-- rolling lambda
+- **rolling lambda**
 - ~~compound evaluation~~
 - ~~water balloon~~
-- HtDW quiz
 - ~~simple text editor~~
 - ~~total string length~~
 - ~~double all~~
