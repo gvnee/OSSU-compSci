@@ -1,4 +1,4 @@
-# All problems and quizs
+# All problems and quizzes
 
 - fs
 - image organizer

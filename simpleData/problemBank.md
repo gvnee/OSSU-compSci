@@ -1,4 +1,4 @@
-# All problems and quizs
+# All problems and quizzes
 
 - ~~more arithmetic expression~~
 - ~~evaluation prims~~
