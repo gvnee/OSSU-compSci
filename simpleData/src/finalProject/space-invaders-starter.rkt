@@ -107,3 +107,22 @@
 (define G2 (make-game (list I1) (list M1) T1))
 (define G3 (make-game (list I1 I2) (list M1 M2) T1))
 
+;; Functions
+
+(define (main g)
+  (big-bang g
+    (on-tick tock)         ; Game -> Game
+    (to-draw render)       ; Game -> Image
+    (on-key handle-key)))  ; Game KeyEvent -> Game
+
+;; Game -> Game
+;; tock
+(check-expect (tock ))
+
+(define (tock G0) G0)
+
+;; Game -> Image
+;; render
+
+;; Game KeyEvent -> Game
+;; change tank's direction when arrow keys are clicked

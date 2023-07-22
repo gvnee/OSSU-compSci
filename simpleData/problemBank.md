@@ -59,7 +59,7 @@
 - ~~trip~~
 - ~~growing grass~~
 - ~~tracker~~
-- **rolling lambda**
+- ~~rolling lambda~~
 - ~~compound evaluation~~
 - ~~water balloon~~
 - ~~simple text editor~~
@@ -82,7 +82,7 @@
 - ~~arrange images~~
 - ~~render roster~~
 - ~~making rain filtered~~
-- naturals and helpers design quiz
+- **naturals and helpers design quiz**
 - ~~lookup in list~~
 - ~~bst dd~~
 - ~~lookup in bst~~
@@ -91,6 +91,6 @@
 - ~~sum keys~~
 - ~~height starter~~
 - ~~insert starter~~
-- balance factor
-- render bst w lines
-- space invaders
+- ~~balance factor~~
+- **render bst w lines**
+- **space invaders**

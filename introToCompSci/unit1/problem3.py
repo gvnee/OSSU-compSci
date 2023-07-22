@@ -1,5 +1,4 @@
-res = ''
-cur = ''
+res, cur = '', ''
 prev = 'a'
 for l in s:
   if l >= prev: cur+=l
