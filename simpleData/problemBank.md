@@ -51,7 +51,7 @@
 - ~~add mouse handler~~
 - ~~countdown animation~~
 - ~~traffic light~~
-- **HtDW design quiz**
+- ~~HtDW design quiz~~
 - ~~cowabunga~~
 - ~~movie starter~~
 - ~~spinning~~
