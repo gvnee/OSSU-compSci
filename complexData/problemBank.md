@@ -1,7 +1,7 @@
 # All problems and quizzes
 
-- fs
-- image organizer
+- ~~fs~~
+- **image organizer**
 - find person
 - hp family tree
 - concat
