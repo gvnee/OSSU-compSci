@@ -82,7 +82,7 @@
 - ~~arrange images~~
 - ~~render roster~~
 - ~~making rain filtered~~
-- **naturals and helpers design quiz**
+- ~~naturals and helpers design quiz~~
 - ~~lookup in list~~
 - ~~bst dd~~
 - ~~lookup in bst~~
