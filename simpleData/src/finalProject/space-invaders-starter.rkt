@@ -35,13 +35,15 @@
               (above (rectangle 5 10 "solid" "black")       ;gun
                      (rectangle 20 10 "solid" "black"))))   ;main body
 
+(define TANKW/2 (/ (image-width TANK) 2))
+
 (define TANK-HEIGHT/2 (/ (image-height TANK) 2))
 
 (define TANKY (- HEIGHT TANK-HEIGHT/2 10))
 
 (define MISSILE (ellipse 5 15 "solid" "red"))
 
-
+(define MISSILEH/2 (/ (image-height MISSILE) 2))
 
 ;; Data Definitions:
 
@@ -114,7 +116,81 @@
 ;; Game -> Game
 ;; tock
 ;; !!!
-(define (tock g) G0)
+;(define (tock g) G0)
+
+(define (tock g)
+  (make-game (next-invaders (game-invaders g))
+             (next-missiles (game-missiles g))
+             (next-tank (game-tank g))))
+
+;; ListOfInvader -> ListOfInvader
+;; !!!
+;(define (next-invaders loi) empty)
+
+(define (next-invaders loi)
+  (cond [(empty? loi) empty]
+        [else
+         (cons (next-invader (first loi))
+               (next-invaders (rest loi)))]))
+
+;; Invader -> Invader
+
+;(define (next-invader i) I1)
+
+(define (next-invader i)
+  (make-invader (invader-x i) (+ (invader-y i) 1) (invader-dx i)))
+
+;; ListOfMissilse -> ListOfMissile
+;; return next missiles, remove a missile of it is out of sight
+(check-expect (next-missiles empty) empty)
+(check-expect (next-missiles (list M1)) (list (next-missile M1)))
+(check-expect (next-missiles (list M1 M2)) (list (next-missile M1) (next-missile M2)))
+(check-expect (next-missiles (list M1 (make-missile 0 -100))) (list (next-missile M1)))
+(check-expect (next-missiles (list M1 (make-missile 0 (- MISSILEH/2)))) (list (next-missile M1)))
+
+;(define (next-missiles lom) empty)
+
+(define (next-missiles lom)
+  (cond [(empty? lom) empty]
+        [(missile-out? (first lom)) (next-missiles (rest lom))]
+        [else
+         (cons
+          (next-missile (first lom))
+          (next-missiles (rest lom)))]))
+
+
+;; Missile -> Boolean
+;; check whether missile is out of sight
+(check-expect (missile-out? M1) false)
+(check-expect (missile-out? (make-missile 0 -100)) true)
+(check-expect (missile-out? (make-missile 0 (- MISSILEH/2))) true)
+
+;(define (missile-out? m) false)
+
+(define (missile-out? m)
+  (<= (missile-y m) (- MISSILEH/2)))
+
+;; Missile -> Missile
+(check-expect (next-missile (make-missile 0 HEIGHT)) (make-missile 0 (- HEIGHT MISSILE-SPEED)))
+(check-expect (next-missile (make-missile 10 100)) (make-missile 10 (- 100 MISSILE-SPEED)))
+
+;(define (next-missile m) M1)
+
+(define (next-missile m)
+  (make-missile (missile-x m) (- (missile-y m) MISSILE-SPEED)))
+
+;; Tank -> Tank
+(check-expect (next-tank T0) (make-tank (+ TANK-SPEED (tank-x T0)) (tank-dir T0)))
+(check-expect (next-tank (make-tank 0 -1)) (make-tank (add1 TANKW/2) 1))
+(check-expect (next-tank (make-tank 0  1)) (make-tank (add1 TANKW/2) 1))
+(check-expect (next-tank (make-tank WIDTH 1)) (make-tank (sub1 (- WIDTH TANKW/2)) -1))
+
+;(define (next-tank t) T0)
+
+(define (next-tank t)
+  (cond [(< (tank-x t) TANKW/2) (make-tank (add1 TANKW/2) 1)]
+        [(> (tank-x t) (- WIDTH TANKW/2)) (make-tank (sub1 (- WIDTH TANKW/2)) -1)]
+        [else (make-tank (+ (* (tank-dir t) TANK-SPEED) (tank-x t)) (tank-dir t))]))
 
 ;; Game -> Image
 ;; render
@@ -182,7 +258,6 @@
 ;; Game KeyEvent -> Game
 ;; change tank's direction when arrow keys are clicked
 ;; and shoot missiles when space key is pressed
-;; !!!
 (check-expect (handle-key G0 "a") G0)
 (check-expect (handle-key G0 "left") (make-game empty empty (make-tank (tank-x T0) -1)))
 (check-expect (handle-key G0 "right") (make-game empty empty (make-tank (tank-x T0) 1)))
@@ -191,21 +266,37 @@
 (check-expect (handle-key (make-game empty empty (make-tank 20 -1)) "right")
               (make-game empty empty (make-tank 20 1)))
 
+(check-expect (handle-key G0 " ") (make-game empty (list (make-missile (tank-x T0) (- TANKY 20))) T0))
+(check-expect (handle-key G2 " ") (make-game (game-invaders G2)
+                                             (cons (make-missile (tank-x T1) (- TANKY 20)) (game-missiles G2))
+                                             T1))
+
 ;(define (handle-key g key) G0)
 
 (define (handle-key g key)
   (make-game (game-invaders g)
-             (game-missiles g)
-             (key-helper (game-tank g) key)))
+             (shoot-missile (game-missiles g) (game-tank g) key)
+             (change-direction (game-tank g) key)))
 
 ;; Tank KeyEvent -> Tank
-;; helper for handle-key
+;; change tank's direction if left or right arrows are clicked 
+(check-expect (change-direction T0 "e") T0)
+(check-expect (change-direction T0 "left") (make-tank (tank-x T0) -1))
+(check-expect (change-direction T0 "right") (make-tank (tank-x T0) 1))
 
-(check-expect (key-helper T0 "e") T0)
-(check-expect (key-helper T0 "left") (make-tank (tank-x T0) -1))
-(check-expect (key-helper T0 "right") (make-tank (tank-x T0) 1))
-
-(define (key-helper t key)
+(define (change-direction t key)
   (cond [(key=? key "left") (make-tank (tank-x t) -1)]
         [(key=? key "right") (make-tank (tank-x t) 1)]
         [else t]))
+
+;; ListOfMissile Tank KeyEvent -> ListOfMissile
+;; add new missile if " " is clicked
+(check-expect (shoot-missile empty T0 "a") empty)
+(check-expect (shoot-missile empty T0 " ") (list (make-missile (tank-x T0) (- TANKY 20))))
+(check-expect (shoot-missile (list M1) T0 " ") (cons (make-missile (tank-x T0) (- TANKY 20)) (list M1)))
+
+;(define (shoot-missile lom t key) empty)
+
+(define (shoot-missile lom t key)
+  (cond [(key=? key " ") (cons (make-missile (tank-x t) (- TANKY 20)) lom)]
+        [else lom]))
