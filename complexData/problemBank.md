@@ -1,9 +1,9 @@
 # All problems and quizzes
 
 - ~~fs~~
-- **image organizer**
-- find person
-- hp family tree
+- ~~image organizer~~
+- ~~find person~~
+- **hp family tree**
 - concat
 - merge
 - zip

@@ -28,6 +28,10 @@
               -5 6
               (ellipse 20 10 "solid"   "blue")))            ;saucer
 
+(define INVADERH/2 (/ (image-height INVADER) 2))
+(define INVADERW/2 (/ (image-width INVADER) 2))
+
+
 (define TANK
   (overlay/xy (overlay (ellipse 28 8 "solid" "black")       ;tread center
                        (ellipse 30 10 "solid" "green"))     ;tread outline
@@ -78,9 +82,9 @@
 ;; interp. the invader is at (x, y) in screen coordinates
 ;;         the invader along x by dx pixels per clock tick
 
-(define I1 (make-invader 150 100 12))           ;not landed, moving right
-(define I2 (make-invader 150 HEIGHT -10))       ;exactly landed, moving left
-(define I3 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
+(define I1 (make-invader 150 100 1))           ;not landed, moving right
+(define I2 (make-invader 150 HEIGHT -1))       ;exactly landed, moving left
+(define I3 (make-invader 150 (+ HEIGHT 10) 1)) ;> landed, moving right
 
 #;
 (define (fn-for-invader invader)
@@ -115,7 +119,6 @@
 
 ;; Game -> Game
 ;; tock
-;; !!!
 ;(define (tock g) G0)
 
 (define (tock g)
@@ -123,22 +126,52 @@
              (next-missiles (game-missiles g))
              (next-tank (game-tank g))))
 
-;; ListOfInvader -> ListOfInvader
-;; !!!
-;(define (next-invaders loi) empty)
+;; Next-invaders
+;; advance invaders and randomly spawn a invader
 
 (define (next-invaders loi)
+  (if (= 1 (random INVADE-RATE))
+      (cons (make-invader 0 0 1) (advance-invaders loi))
+      (advance-invaders loi)))
+
+;; ListOfInvader -> ListOfInvader
+;; advance invaders
+;(define (next-invaders loi) empty)
+
+(check-expect (advance-invaders empty) empty)
+;(check-expect (advance-invaders (list I1)) (list (next-invader I1)))
+;(check-expect (advance-invaders (list I1 I2)) (list (next-invader I1) (next-invader I2)))
+
+(define (advance-invaders loi)
   (cond [(empty? loi) empty]
         [else
          (cons (next-invader (first loi))
                (next-invaders (rest loi)))]))
 
 ;; Invader -> Invader
+;; advance invader
+(check-expect (next-invader (make-invader 0 0 1)) (make-invader (add1 INVADERW/2) INVADER-Y-SPEED 1))
+(check-expect (next-invader (make-invader 200 200 1)) (make-invader (+ 200 INVADER-X-SPEED) (+ 200 INVADER-Y-SPEED) 1))
+(check-expect (next-invader (make-invader WIDTH 0 1)) (make-invader (sub1 (- WIDTH INVADERW/2)) INVADER-Y-SPEED -1))
 
 ;(define (next-invader i) I1)
 
 (define (next-invader i)
-  (make-invader (invader-x i) (+ (invader-y i) 1) (invader-dx i)))
+  (cond [(< (invader-x i) INVADERW/2)
+         (make-invader (add1 INVADERW/2)
+                            (+ (invader-y i) INVADER-Y-SPEED) 1)]
+        [(> (invader-x i) (- WIDTH INVADERW/2))
+         (make-invader (sub1 (- WIDTH INVADERW/2))
+                            (+ (invader-y i) INVADER-Y-SPEED) -1)]
+        [else (make-invader (+ (invader-x i) (* (invader-dx i) INVADER-X-SPEED))
+                            (+ (invader-y i) INVADER-Y-SPEED) (invader-dx i))]))
+
+;; Number -> Number
+;; return either given number or opposite of that number randomly
+
+(define (random-sign n)
+  (if (= 0 (random 2))
+      n (- n)))
 
 ;; ListOfMissilse -> ListOfMissile
 ;; return next missiles, remove a missile of it is out of sight
