@@ -47,6 +47,7 @@
 
 (define MISSILE (ellipse 5 15 "solid" "red"))
 
+(define MISSILEW/2 (/ (image-width MISSILE) 2))
 (define MISSILEH/2 (/ (image-height MISSILE) 2))
 
 ;; Data Definitions:
@@ -109,6 +110,20 @@
 (define G2 (make-game (list I1) (list M1) T1))
 (define G3 (make-game (list I1 I2) (list M1 M2) T1))
 
+(define-struct coords (x1 y1 x2 y2))
+;; Coords is (make-coords Natural Natural Natural Natural)
+;; interp. top right (x1 y1) and bottom left (x2 y2) coordinates of a image
+
+#;
+(define (fn-for-coords c)
+  (... (coords-x1 c)
+       (coords-y1 c)
+       (coords-x2 c)
+       (coords-y2 c)))
+
+(define C0 (make-coords 0 0 0 0))
+(define C1 (make-coords 5 1 2 4))
+
 ;; Functions
 
 (define (main g)
@@ -122,16 +137,47 @@
 ;(define (tock g) G0)
 
 (define (tock g)
+  (filter (advance-game g)))
+
+;; filter
+;; filter out collided invaders and missiles
+
+(define (filter g)
+  (make-game (filter-invaders (game-invaders g) (game-missiles g))
+             (filter-missiles (game-invaders g) (game-missiles g))
+             (game-tank g)))
+
+;; Game -> Game
+;; advance game state
+
+(define (advance-game g)
   (make-game (next-invaders (game-invaders g))
              (next-missiles (game-missiles g))
              (next-tank (game-tank g))))
 
+;; ListOfInvader ListOfMissile -> ListOfInvader
+;; filter out invaders that got hit
+
+(define (filter-invaders loi lom)
+  ())
+
+;; ListOfInvader ListOfMissile -> ListOfMissile
+;; filter out missiles that hit invader
+
+(define (filter-missiles loi lom)
+  )
+
 ;; Next-invaders
 ;; advance invaders and randomly spawn a invader
+#;
+(check-expect (next-invaders empty)
+              (if (= 1 (random INVADE-RATE))
+                  (list (make-invader 0 0 1))
+                  empty))
 
 (define (next-invaders loi)
   (if (= 1 (random INVADE-RATE))
-      (cons (make-invader 0 0 1) (advance-invaders loi))
+      (cons (make-invader (random WIDTH) 0 (random-sign 1)) (advance-invaders loi))
       (advance-invaders loi)))
 
 ;; ListOfInvader -> ListOfInvader
@@ -146,25 +192,27 @@
   (cond [(empty? loi) empty]
         [else
          (cons (next-invader (first loi))
-               (next-invaders (rest loi)))]))
+               (advance-invaders (rest loi)))]))
 
 ;; Invader -> Invader
-;; advance invader
+;; advance invaders location
 (check-expect (next-invader (make-invader 0 0 1)) (make-invader (add1 INVADERW/2) INVADER-Y-SPEED 1))
 (check-expect (next-invader (make-invader 200 200 1)) (make-invader (+ 200 INVADER-X-SPEED) (+ 200 INVADER-Y-SPEED) 1))
 (check-expect (next-invader (make-invader WIDTH 0 1)) (make-invader (sub1 (- WIDTH INVADERW/2)) INVADER-Y-SPEED -1))
 
-;(define (next-invader i) I1)
+;(define (next-invaderi) I1)
 
 (define (next-invader i)
   (cond [(< (invader-x i) INVADERW/2)
          (make-invader (add1 INVADERW/2)
-                            (+ (invader-y i) INVADER-Y-SPEED) 1)]
+                       (+ (invader-y i) INVADER-Y-SPEED) 1)]
         [(> (invader-x i) (- WIDTH INVADERW/2))
          (make-invader (sub1 (- WIDTH INVADERW/2))
-                            (+ (invader-y i) INVADER-Y-SPEED) -1)]
+                       (+ (invader-y i) INVADER-Y-SPEED) -1)]
         [else (make-invader (+ (invader-x i) (* (invader-dx i) INVADER-X-SPEED))
                             (+ (invader-y i) INVADER-Y-SPEED) (invader-dx i))]))
+
+;; Invader -> Boolean
 
 ;; Number -> Number
 ;; return either given number or opposite of that number randomly
@@ -186,11 +234,66 @@
 (define (next-missiles lom)
   (cond [(empty? lom) empty]
         [(missile-out? (first lom)) (next-missiles (rest lom))]
+        ;[(hit-invader? (missile->coords (first lom)) loc) (next-missiles (rest lom) loc)]
         [else
          (cons
           (next-missile (first lom))
           (next-missiles (rest lom)))]))
 
+;; coords ListOfCoords -> Boolean
+;; return true if a missiles coordinate intersects with any invaders coordinate
+
+;(define (hit-invader? c loc) false)
+
+(define (hit-invader? c loc)
+  (cond [(empty? loc) false]
+        [else
+         (if (intersects? c (first loc)) true
+             (hit-invader? c (rest loc)))]))
+
+;; Coords Coords -> Boolean
+;; determine whether two coordinates intersect
+
+;(define (intersects? c1 c2) false)
+
+(define (intersects? c1 c2)
+  (and (>= (coords-x1 c1) (coords-x2 c2))
+       (<= (coords-x2 c1) (coords-x1 c2))
+       (<= (coords-y1 c1) (coords-y2 c2))
+       (>= (coords-y2 c1) (coords-y1 c2))))
+
+;; Missile -> Coords
+;; convert missile to coordinate
+
+; (define (missile->coords m) C0)
+
+(define (missile->coords m)
+  (make-coords (+ (missile-x m) MISSILEW/2)
+               (- (missile-y m) MISSILEH/2)
+               (- (missile-x m) MISSILEW/2)
+               (+ (missile-y m) MISSILEH/2)))
+
+;; Invader -> Coords
+;; convert invader to coordinate
+
+; (define (invader->coords m) C0)
+
+(define (invader->coords m)
+  (make-coords (+ (invader-x m) INVADERW/2)
+               (- (invader-y m) INVADERH/2)
+               (- (invader-x m) INVADERW/2)
+               (+ (invader-y m) INVADERH/2)))
+
+;; ListOfInvader -> ListOfCoords
+;; convert invaders to coordinates
+
+;(define (loi->coords loi) empty)
+
+(define (loi->coords loi)
+  (cond [(empty? loi) empty]
+        [else
+         (cons (invader->coords (first loi))
+               (loi->coords (rest loi)))]))
 
 ;; Missile -> Boolean
 ;; check whether missile is out of sight
