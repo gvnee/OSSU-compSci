@@ -93,4 +93,4 @@
 - ~~insert starter~~
 - ~~balance factor~~
 - **render bst w lines**
-- **space invaders**
+- ~~space invaders~~

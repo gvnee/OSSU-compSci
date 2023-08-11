@@ -130,7 +130,8 @@
   (big-bang g
     (on-tick tock)         ; Game -> Game
     (to-draw render)       ; Game -> Image
-    (on-key handle-key)))  ; Game KeyEvent -> Game
+    (on-key handle-key)  ; Game KeyEvent -> Game
+    (stop-when stop?)))
 
 ;; Game -> Game
 ;; tock
@@ -139,7 +140,7 @@
 (define (tock g)
   (filter (advance-game g)))
 
-;; filter
+;; Game -> Game
 ;; filter out collided invaders and missiles
 
 (define (filter g)
@@ -159,21 +160,38 @@
 ;; filter out invaders that got hit
 
 (define (filter-invaders loi lom)
-  ())
+  (cond [(empty? loi) empty]
+        [(got-hit? (first loi) lom) (filter-invaders (rest loi) lom)]
+        [else
+         (cons (first loi) (filter-invaders (rest loi) lom))]))
 
 ;; ListOfInvader ListOfMissile -> ListOfMissile
 ;; filter out missiles that hit invader
 
 (define (filter-missiles loi lom)
-  )
+  (cond [(empty? lom) empty]
+        [(hit-invader? loi (first lom)) (filter-missiles loi (rest lom))]
+        [else
+         (cons (first lom) (filter-missiles loi (rest lom)))]))
+
+;; Invader ListOfMissile -> Boolean
+
+(define (got-hit? i lom)
+  (cond [(empty? lom) false]
+        [(intersects? (invader->coords i) (missile->coords (first lom))) true]
+        [else
+         (got-hit? i (rest lom))]))
+
+;; ListOfInvader Missile -> Boolean
+
+(define (hit-invader? loi m)
+  (cond [(empty? loi) false]
+        [(intersects? (invader->coords (first loi)) (missile->coords m)) true]
+        [else
+         (hit-invader? (rest loi) m)]))
 
 ;; Next-invaders
 ;; advance invaders and randomly spawn a invader
-#;
-(check-expect (next-invaders empty)
-              (if (= 1 (random INVADE-RATE))
-                  (list (make-invader 0 0 1))
-                  empty))
 
 (define (next-invaders loi)
   (if (= 1 (random INVADE-RATE))
@@ -212,6 +230,24 @@
         [else (make-invader (+ (invader-x i) (* (invader-dx i) INVADER-X-SPEED))
                             (+ (invader-y i) INVADER-Y-SPEED) (invader-dx i))]))
 
+;; Game -> Boolean
+
+(define (stop? g)
+  (stop-helper (game-invaders g)))
+
+;; ListOfInvader -> Boolean
+
+(define (stop-helper loi)
+  (cond [(empty? loi) false]
+        [(invader-bottom? (first loi)) true]
+        [else
+         (stop-helper (rest loi))]))
+
+;; Invader -> Boolean
+
+(define (invader-bottom? i)
+  (>= (+ (invader-y i) INVADERH/2) HEIGHT))
+
 ;; Invader -> Boolean
 
 ;; Number -> Number
@@ -234,22 +270,10 @@
 (define (next-missiles lom)
   (cond [(empty? lom) empty]
         [(missile-out? (first lom)) (next-missiles (rest lom))]
-        ;[(hit-invader? (missile->coords (first lom)) loc) (next-missiles (rest lom) loc)]
         [else
          (cons
           (next-missile (first lom))
           (next-missiles (rest lom)))]))
-
-;; coords ListOfCoords -> Boolean
-;; return true if a missiles coordinate intersects with any invaders coordinate
-
-;(define (hit-invader? c loc) false)
-
-(define (hit-invader? c loc)
-  (cond [(empty? loc) false]
-        [else
-         (if (intersects? c (first loc)) true
-             (hit-invader? c (rest loc)))]))
 
 ;; Coords Coords -> Boolean
 ;; determine whether two coordinates intersect
@@ -283,17 +307,6 @@
                (- (invader-y m) INVADERH/2)
                (- (invader-x m) INVADERW/2)
                (+ (invader-y m) INVADERH/2)))
-
-;; ListOfInvader -> ListOfCoords
-;; convert invaders to coordinates
-
-;(define (loi->coords loi) empty)
-
-(define (loi->coords loi)
-  (cond [(empty? loi) empty]
-        [else
-         (cons (invader->coords (first loi))
-               (loi->coords (rest loi)))]))
 
 ;; Missile -> Boolean
 ;; check whether missile is out of sight
