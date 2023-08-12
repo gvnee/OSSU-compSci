@@ -3,7 +3,7 @@
 - ~~fs~~
 - ~~image organizer~~
 - ~~find person~~
-- **hp family tree**
+- ~~hp family tree~~
 - concat
 - merge
 - zip
