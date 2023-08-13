@@ -9,12 +9,13 @@
 - ~~zip~~
 - ~~pattern match~~
 - ~~championship bracket~~
-- fs v4, v5, v6, v7
+- ~~fs v4, v5, v6~~, v7
 - evaluate boo
 - render bst w lines faster
 - evaluate foo
 - encapsulate total area
 - championship bracket improved
+- local-design-quiz
 - parameterization
 - using built ins
 - closures
