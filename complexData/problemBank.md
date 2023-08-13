@@ -4,11 +4,11 @@
 - ~~image organizer~~
 - ~~find person~~
 - ~~hp family tree~~
-- concat
-- merge
-- zip
-- pattern match
-- championship bracket
+- ~~concat~~
+- ~~merge~~
+- ~~zip~~
+- ~~pattern match~~
+- ~~championship bracket~~
 - fs v4, v5, v6, v7
 - evaluate boo
 - render bst w lines faster
