@@ -92,5 +92,5 @@
 - ~~height starter~~
 - ~~insert starter~~
 - ~~balance factor~~
-- **render bst w lines**
+- ~~render bst w lines~~
 - ~~space invaders~~
