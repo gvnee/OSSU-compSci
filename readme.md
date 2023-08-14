@@ -22,10 +22,16 @@
 
 ## prerequisites
 - **algebra**
+  - **Intermediate Algebra (Miller, O'Neill Hyde)**
 - geometry
+  - Geometry (Jurgensen)
 - trigonometry
+  - Plane Trigonometry Sixth Edition
+  - Trigonometry exercises (Chris McMullen)
 - proof
+  - How To Prove It (Daniel J. Velleman)
 - pre-calculus
+  - Algebra and Trigonometry book
   
 ---
 
