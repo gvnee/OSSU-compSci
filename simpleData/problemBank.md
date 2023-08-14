@@ -1,5 +1,7 @@
 # All problems and quizzes
 
+## Beginner Student Language
+
 - ~~more arithmetic expression~~
 - ~~evaluation prims~~
 - ~~tile~~
@@ -16,6 +18,9 @@
 - ~~overlay~~
 - ~~function writing~~
 - ~~foo evaluation~~
+
+## How to Design Function
+
 - ~~yell~~
 - ~~area~~
 - ~~image area~~
@@ -29,6 +34,9 @@
 - ~~make box~~
 - ~~ensure question~~
 - ~~cartesian~~
+
+## How to Design Data
+
 - ~~city name~~
 - ~~best~~
 - ~~seat num~~
@@ -47,11 +55,17 @@
 - ~~direction~~
 - ~~dinner~~
 - ~~htDD Design quiz~~
+
+## How to Design World
+
 - ~~cat~~
 - ~~add mouse handler~~
 - ~~countdown animation~~
 - ~~traffic light~~
 - ~~HtDW design quiz~~
+
+## Compound
+
 - ~~cowabunga~~
 - ~~movie starter~~
 - ~~spinning~~
@@ -63,26 +77,41 @@
 - ~~compound evaluation~~
 - ~~water balloon~~
 - ~~simple text editor~~
+
+## Self-Reference
+
 - ~~total string length~~
 - ~~double all~~
 - ~~boolean list~~
 - ~~yell all~~
 - ~~largest~~
 - ~~image list~~
+
+## Reference
+
 - ~~tuition graph~~
 - ~~alternative tuition graph~~
 - ~~spinning bears~~
 - ~~tuition graph c~~
+
+## Naturals
+
 - ~~naturals~~
 - ~~new numerals~~
 - ~~sum to n~~
 - ~~decreasing image~~
 - ~~odd from n~~
 - ~~concentric cirlces~~
+
+## Helpers
+
 - ~~arrange images~~
 - ~~render roster~~
 - ~~making rain filtered~~
 - ~~naturals and helpers design quiz~~
+
+## Binary Search Tree
+
 - ~~lookup in list~~
 - ~~bst dd~~
 - ~~lookup in bst~~
@@ -93,4 +122,7 @@
 - ~~insert starter~~
 - ~~balance factor~~
 - ~~render bst w lines~~
+
+## Final Project
+
 - ~~space invaders~~

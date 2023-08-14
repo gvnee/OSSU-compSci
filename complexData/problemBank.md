@@ -1,21 +1,32 @@
 # All problems and quizzes
 
+## Mutual reference
+
 - ~~fs, v2, v3~~
 - ~~image organizer~~
 - ~~find person~~
 - ~~hp family tree~~
+
+## Two One-of types
+
 - ~~concat~~
 - ~~merge~~
 - ~~zip~~
 - ~~pattern match~~
 - ~~championship bracket~~
+
+## Local
+
 - ~~fs v4, v5, v6~~, v7
 - ~~evaluate boo~~
 - ~~render bst w lines faster~~
 - ~~evaluate foo~~
 - ~~encapsulate total area~~
 - ~~championship bracket improved~~
-- ~~local-design-quiz~~
+- ~~local design quiz~~
+
+## Abstraction
+
 - parameterization
 - using built ins
 - closures
@@ -30,15 +41,24 @@
 - fold dir
 - accounts
 - weather
+
+## Generative Recursion
+
 - fractals
 - termination
 - circle fractal
 - van koch
 - cantor
+
+## Search
+
 - sudoku
 - maze 2w
 - triangle solitaire
 - nqueens
+
+## Accumulators
+
 - dropn
 - replicate elm
 - strictly decreasing
@@ -54,6 +74,9 @@
 - skip1
 - sum tr
 - same house as parent
+
+## Graphs
+
 - all reachable
 - count rooms
 - lookup room
