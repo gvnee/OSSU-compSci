@@ -123,6 +123,6 @@
 - ~~balance factor~~
 - ~~render bst w lines~~
 
-## Final Project
+## Final Project,
 
 - ~~space invaders~~

@@ -27,12 +27,11 @@
 
 ## Abstraction
 
-- parameterization
+- ~~parameterization, v2, v3~~
 - using built ins
 - closures
 - wide only
 - photos
-- abstract sum
 - abstract sum
 - abstract some
 - ellipses
@@ -82,4 +81,4 @@
 - lookup room
 - max exits from
 - max exits to
-- graphs
+- graphs, v2, v3, v4, v5
