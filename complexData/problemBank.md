@@ -28,18 +28,19 @@
 ## Abstraction
 
 - ~~parameterization, v2, v3~~
-- using built ins
-- closures
-- wide only
-- photos
-- abstract sum
-- abstract some
-- ellipses
-- bag
-- sum n
-- fold dir
-- accounts
-- weather
+- ~~using built ins~~
+- ~~closures~~
+- ~~wide only~~
+- ~~photos~~
+- ~~abstract sum~~
+- ~~abstract some~~
+- ~~ellipses~~
+- ~~bag~~
+- ~~sum n~~
+- ~~fold dir~~
+- ~~accounts~~
+- ~~weather~~
+- **abstraction quiz**
 
 ## Generative Recursion
 
