@@ -40,7 +40,7 @@
 - ~~fold dir~~
 - ~~accounts~~
 - ~~weather~~
-- **abstraction quiz**
+- ~~abstraction quiz~~
 
 ## Generative Recursion
 
