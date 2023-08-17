@@ -44,9 +44,9 @@
 
 ## Generative Recursion
 
-- fractals
-- termination
-- circle fractal
+- ~~fractals~~
+- ~~termination~~
+- ~~circle fractal~~
 - van koch
 - cantor
 
