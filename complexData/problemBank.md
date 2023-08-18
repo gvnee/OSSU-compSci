@@ -48,7 +48,7 @@
 - ~~termination~~
 - ~~circle fractal~~
 - van koch
-- cantor
+- ~~cantor~~
 
 ## Search
 
