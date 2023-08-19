@@ -23,16 +23,16 @@
 ## prerequisites
 - **algebra**
   - **Intermediate Algebra (Miller, O'Neill Hyde)**
+- proof
+  - How To Prove It (Daniel J. Velleman)
 - geometry
   - Geometry (Jurgensen)
 - trigonometry
   - Plane Trigonometry Sixth Edition
   - Trigonometry exercises (Chris McMullen)
-- proof
-  - How To Prove It (Daniel J. Velleman)
 - pre-calculus
   - Algebra and Trigonometry book
-  
+
 ---
 
 - [Calculus 1A](https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.01.1x+2T2019/about)  
@@ -45,11 +45,6 @@
 - [The missing Semester of Your CS Education](https://missing.csail.mit.edu/)  
 
 # Core systems
-
-## prerequisites
-- high school physics
-
----
 
 - [Build a Modern Computer from First Principles: From Nand to Tetris](https://www.coursera.org/learn/build-a-computer)  
 - [Build a Modern Computer from First Principles: From Nand to Tetris 2](https://www.coursera.org/learn/nand2tetris2)  
