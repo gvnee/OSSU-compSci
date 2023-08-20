@@ -52,10 +52,11 @@
 
 ## Search
 
-- sudoku
+- ~~sudoku~~
 - maze 2w
 - triangle solitaire
 - nqueens
+- generative recursion quiz
 
 ## Accumulators
 
