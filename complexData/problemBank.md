@@ -53,7 +53,7 @@
 ## Search
 
 - ~~sudoku~~
-- maze 2w
+- ~~maze 2w~~
 - triangle solitaire
 - nqueens
 - generative recursion quiz
