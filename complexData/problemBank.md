@@ -54,7 +54,7 @@
 
 - ~~sudoku~~
 - ~~maze 2w~~
-- triangle solitaire
+- ~~triangle solitaire~~
 - nqueens
 - generative recursion quiz
 
