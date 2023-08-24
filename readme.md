@@ -48,7 +48,7 @@
 
 - [Build a Modern Computer from First Principles: From Nand to Tetris](https://www.coursera.org/learn/build-a-computer)  
 - [Build a Modern Computer from First Principles: From Nand to Tetris 2](https://www.coursera.org/learn/nand2tetris2)  
-- [Operating Systems: Three Easy Pieces](https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md)  
+- **[Operating Systems: Three Easy Pieces](https://github.com/ossu/computer-science/blob/master/coursepages/ostep/README.md)**  
 - [Computer Networking: a Top-Down Approach](http://gaia.cs.umass.edu/kurose_ross/online_lectures.htm)  
 
 # Core theory
