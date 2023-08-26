@@ -9,39 +9,36 @@ int main(int argc, char *argv[]){
     exit(1);
   }
 
-  for(int j = 1;j<argc;j++){
-    char* fname = argv[j];
+  int count = 0;
+  char cur = '\0';
 
-    FILE *fl = fopen(fname, "r");
-    char* str;
+  for(int j = 1;j<argc;j++){
+
+    char* fname = argv[j];
+    FILE* fl = fopen(fname, "r");
+
     size_t len;
+    char* str;
 
     while(getline(&str, &len, fl) != EOF){
-      char cur;
-      int count = 0;
-        if(strlen(str)>0) cur = str[0];
+
       for(int i = 0;i<strlen(str);i++){
-        if(str[i] == '\n') printf("\n");
-        if(str[i] == cur) count++;
-        else{
+        if(cur == '\0') cur = str[i];
+        if(str[i] != cur){
           fwrite(&count, sizeof(int), 1, stdout);
-          // printf("%d", count);
-          fwrite(&cur, sizeof(char), 1, stdout);
-          // printf("%c", cur);
+          printf("%c", cur);
           cur = str[i];
           count = 1;
         }
+        else count++;
       }
 
-      if(count > 1){
-        fwrite(&count, sizeof(int), 1, stdout);
-        fwrite(&cur, sizeof(char), 1, stdout);
-      }
-      
     }
-    
     fclose(fl);
   }
 
+  fwrite(&count, sizeof(int), 1, stdout);
+  printf("%c", cur);
+  
   return 0;
 }
