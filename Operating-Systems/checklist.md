@@ -4,4 +4,7 @@
 
 ## Intro
 
-- initial-utilities
+- ~~initial-utilities~~
+- initial-kv
+- initial-reverse
+- initial-memcached
