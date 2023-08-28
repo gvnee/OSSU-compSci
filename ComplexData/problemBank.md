@@ -56,7 +56,7 @@
 - ~~maze 2w~~
 - ~~triangle solitaire~~
 - ~~nqueens~~
-- generative recursion quiz
+- ~~generative recursion quiz~~
 
 ## Accumulators
 
