@@ -6,7 +6,7 @@ int main(int argc, char* argv[]){
 
   FILE* db = fopen("database.txt", "w+");
 
-  char* arr[100000];
+  char arr[10000][100];
 
   for(int i = 1;i<argc;i++){
 
@@ -23,10 +23,10 @@ int main(int argc, char* argv[]){
       j++;
     }
 
-    printf("%s %d %s\n", cmd, key, value);
+    // printf("%s %d %s\n", cmd, key, value);
 
     if(strcmp(cmd, "p") == 0){
-      arr[key] = value;
+      strcpy(arr[key], value);
     }
     else if(strcmp(cmd, "g") == 0){
       printf("%s\n", arr[key]);

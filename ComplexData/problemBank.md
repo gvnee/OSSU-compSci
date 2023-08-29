@@ -60,7 +60,7 @@
 
 ## Accumulators
 
-- dropn
+- ~~dropn~~
 - replicate elm
 - strictly decreasing
 - average tr

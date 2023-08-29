@@ -23,15 +23,15 @@
 ## prerequisites
 - **algebra**
   - **Intermediate Algebra (Miller, O'Neill Hyde)**
+  - **Professor Leonard Algebra lectures**
 - proof
   - How To Prove It (Daniel J. Velleman)
 - geometry
   - Geometry (Jurgensen)
-- trigonometry
-  - Plane Trigonometry Sixth Edition
-  - Trigonometry exercises (Chris McMullen)
 - pre-calculus
-  - Algebra and Trigonometry book
+  - Professor Leonard Pre-calculus lectures
+  - Trigonometry exercises (Chris McMullen)
+  - Plane Trigonometry Sixth Edition
 
 ---
 
