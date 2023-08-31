@@ -4,9 +4,16 @@
 
 int main(int argc, char* argv[]){
 
-  FILE* db = fopen("database.txt", "w+");
+  FILE* db = fopen("database.txt", "r");
 
   char arr[10000][100];
+  int key;
+  char* value = '\0';
+  while(fscanf(db, "%d", &key) != EOF){
+    fscanf(db, "%s", value);
+    printf("%d %s\n", key, value);
+    // strcpy(arr[key], value);
+  }
 
   for(int i = 1;i<argc;i++){
 

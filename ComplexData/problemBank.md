@@ -61,10 +61,10 @@
 ## Accumulators
 
 - ~~dropn~~
-- replicate elm
-- strictly decreasing
-- average tr
-- product tr
+- ~~replicate elm~~
+- ~~strictly decreasing~~
+- ~~average tr~~
+- ~~product tr~~
 - sum n tr
 - sum odds tr
 - to list tr
@@ -72,8 +72,8 @@
 - rev tr
 - house path
 - contains key tr
-- skip1
-- sum tr
+- ~~skip1~~
+- ~~sum tr~~
 - same house as parent
 
 ## Graphs
