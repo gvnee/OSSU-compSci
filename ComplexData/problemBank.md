@@ -65,11 +65,11 @@
 - ~~strictly decreasing~~
 - ~~average tr~~
 - ~~product tr~~
-- sum n tr
-- sum odds tr
-- to list tr
-- count odd even tr
-- rev tr
+- ~~sum n tr~~
+- ~~sum odds tr~~
+- ~~to list tr~~
+- ~~count odd even tr~~
+- ~~rev tr~~
 - house path
 - contains key tr
 - ~~skip1~~
