@@ -71,7 +71,7 @@
 - ~~count odd even tr~~
 - ~~rev tr~~
 - house path
-- contains key tr
+- ~~contains key tr~~
 - ~~skip1~~
 - ~~sum tr~~
 - same house as parent
