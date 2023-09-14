@@ -2,7 +2,9 @@
 
 ## Virtualization
 
-- cpu-intro
+- ~~cpu-intro~~
+- cpu-api
+- cpu-
 
 # Projects
 
